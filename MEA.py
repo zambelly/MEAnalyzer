@@ -10932,7 +10932,7 @@ sys.excepthook = show_exception_and_exit
 # Set console/shell window title
 mea_title = '%s %s' % (title, mea_db_rev)
 if sys_os == 'win32' : ctypes.windll.kernel32.SetConsoleTitleW(mea_title)
-elif sys_os.startswith('linux') or sys_os == 'darwin' : sys.stdout.write('\x1b]2;' + mea_title + '\x07')
+# elif sys_os.startswith('linux') or sys_os == 'darwin' : sys.stdout.write('\x1b]2;' + mea_title + '\x07')
 
 if not param.skip_intro :
     mea_hdr(mea_db_rev_p)
